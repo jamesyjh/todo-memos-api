@@ -1,0 +1,16 @@
+{
+  "extends": "nx/presets/npm.json",
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "nx/tasks-runners/default",
+      "options": {
+        "cacheableOperations": ["lint", "compile", "test"]
+      }
+    }
+  },
+  "targetDefaults": {
+    "compile": { "dependsOn": ["^compile"] },
+    "test": { "dependsOn": ["^compile"] },
+    "list": { "dependsOn": ["^compile"] }
+  }
+}

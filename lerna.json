@@ -1,9 +1,12 @@
 {
-	"lerna": "5.3.0",
-	"$schema": "node_modules/lerna/schemas/lerna-schema.json",
-	"packages": ["packages/*"],
-	"useNx": true,
-	"useWorkspaces": true,
-	"version": "0.0.0",
-	"npmClient": "yarn"
+  "command": {
+    "version": {
+      "exact": true,
+      "conventionalCommits": true,
+      "ignoreChanges": [".npmrc"]
+    }
+  },
+  "packages": ["packages/*"],
+  "npmClient": "yarn",
+  "version": "independent"
 }
